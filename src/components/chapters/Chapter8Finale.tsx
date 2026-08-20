@@ -71,10 +71,18 @@ export const Chapter8Finale: React.FC<Props> = ({ config, onReplay, onOpenPerson
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
           <button
             onClick={onReplay}
-            className="flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-400 via-pink-400 to-rose-400 text-slate-950 font-semibold text-sm shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            className="flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-400 via-pink-400 to-rose-400 text-slate-950 font-semibold text-sm shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
           >
             <RotateCcw className="w-4 h-4 text-slate-950" />
             <span>Replay Birthday Story ✦</span>
+          </button>
+
+          <button
+            onClick={onOpenPersonalize}
+            className="flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-amber-200 font-semibold text-sm shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+          >
+            <Edit3 className="w-4 h-4 text-pink-300" />
+            <span>Personalize Details</span>
           </button>
         </div>
       </motion.div>

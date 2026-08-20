@@ -4,6 +4,8 @@ import { Sparkles, ChevronLeft } from 'lucide-react';
 import { BirthdayStoryConfig, StoryChapter } from './types';
 import { DEFAULT_BIRTHDAY_CONFIG } from './data/defaultConfig';
 import { StarryBackground } from './components/StarryBackground';
+import { AudioControl } from './components/AudioControl';
+import { PersonalizeModal } from './components/PersonalizeModal';
 import { Chapter1Curiosity } from './components/chapters/Chapter1Curiosity';
 import { Chapter2Reveal } from './components/chapters/Chapter2Reveal';
 import { Chapter3Letter } from './components/chapters/Chapter3Letter';
@@ -25,8 +27,9 @@ const CHAPTER_SEQUENCE: StoryChapter[] = [
 ];
 
 export default function App() {
-  const [config] = useState<BirthdayStoryConfig>(DEFAULT_BIRTHDAY_CONFIG);
+  const [config, setConfig] = useState<BirthdayStoryConfig>(DEFAULT_BIRTHDAY_CONFIG);
   const [currentChapter, setCurrentChapter] = useState<StoryChapter>('curiosity');
+  const [isPersonalizeOpen, setIsPersonalizeOpen] = useState(false);
 
   const currentIndex = CHAPTER_SEQUENCE.indexOf(currentChapter);
 
@@ -53,6 +56,9 @@ export default function App() {
     <div className="relative min-h-screen text-[#f4efe6] overflow-x-hidden font-sans-clean select-none">
       {/* Background Starscape */}
       <StarryBackground />
+
+      {/* Floating Audio Controls */}
+      <AudioControl />
 
       {/* Chapter Back Control (available from Chapter 2 onwards) */}
       {currentIndex > 0 && currentChapter !== 'finale' && (
@@ -102,12 +108,20 @@ export default function App() {
               <Chapter8Finale
                 config={config}
                 onReplay={handleReplay}
-                onOpenPersonalize={() => {}}
+                onOpenPersonalize={() => setIsPersonalizeOpen(true)}
               />
             )}
           </motion.div>
         </AnimatePresence>
       </main>
+
+      {/* Personalize Modal */}
+      <PersonalizeModal
+        isOpen={isPersonalizeOpen}
+        onClose={() => setIsPersonalizeOpen(false)}
+        config={config}
+        onSave={(updated) => setConfig(updated)}
+      />
 
       {/* Bottom Progress Tracker (shown during story) */}
       {currentIndex > 0 && currentChapter !== 'finale' && (

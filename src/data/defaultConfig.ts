@@ -4,42 +4,42 @@ export const DEFAULT_BIRTHDAY_CONFIG: BirthdayStoryConfig = {
   recipientName: 'Meher Manahil',
   senderName: 'Yasar Safi',
   senderNickname: 'Yasar Safi',
-  birthdayDate: 'August 12',
+  birthdayDate: 'August 21',
   openingSubheading: 'I made something very special just for you, Meher Manahil.',
   personalLetter: `I didn't want to just send a simple "Happy Birthday!" text message this year that gets lost in a group chat or forgotten by tomorrow.
 
 You mean way too much to me for that.
 
-Looking back on everything, I realized how incredibly lucky I am to have someone as wonderful as you, Meher Manahil, in my life. You bring so much energy, warmth, and joy into every room you step into. You turn quiet, ordinary days into moments worth holding onto forever.
+Looking back on all our moments—especially our unforgettable hangout in Murree, the winding mountain roads, the chilly breeze, and all that nonstop laughter—I realized how incredibly lucky I am to have someone as wonderful as you in my life. You bring so much energy, warmth, and joy into every room you step into.
 
-Today is completely yours. I hope you feel surrounded by all the happiness, laughter, and love you so generously share with everyone around you every single day.`,
+Today is completely yours. I hope 21 brings you endless happiness, exciting new adventures, and all the love you so generously share with everyone around you every single day.`,
   memories: [
     {
       id: 'mem-1',
-      title: 'That Golden Hour Conversation',
-      date: 'October 14, 2025',
-      imageUrl: '/src/assets/images/memory_sunset_talks_1786568750380.jpg',
-      caption: 'When we sat watching the sunset and lost all track of time.',
-      detailedStory: 'We originally said we would only stay for 10 minutes, but we ended up talking for hours until the sky turned deep violet. That afternoon reminded me how effortless it is to talk to you about anything and everything.',
-      location: 'Sunset Point'
+      title: 'The Murree Road Trip & Mountain Breeze',
+      date: 'Murree Road Trip',
+      imageUrl: '/src/assets/images/murree_road_trip_1787247456799.jpg',
+      caption: 'Winding roads through the pine forests with our favorite songs on repeat.',
+      detailedStory: 'The drive up through the hills of Murree was pure magic. Windows rolled down, that crisp cold pine air rushing in, singing along to every song on the playlist, and laughing until our stomachs hurt. It was one of the best drives ever.',
+      location: 'Murree Expressway & Hills'
     },
     {
       id: 'mem-2',
-      title: 'Late Night Coffee & Unstoppable Laughter',
-      date: 'December 22, 2025',
-      imageUrl: '/src/assets/images/memory_coffee_laugh_1786568767945.jpg',
-      caption: 'Two cups of warm coffee and jokes that had us crying of laughter.',
-      detailedStory: 'Remember when we tried to stay focused, but one small joke turned into 20 minutes of non-stop laughing in the corner of the cozy cafe? Everyone was looking, but neither of us cared.',
-      location: 'Fairy Light Cafe'
+      title: 'Hot Karak Chai in the Chilly Evening',
+      date: 'Chilly Evening in Murree',
+      imageUrl: '/src/assets/images/murree_chai_cafe_1787247477282.jpg',
+      caption: 'Holding warm cups of chai while shivering and sharing endless stories.',
+      detailedStory: 'Remember when we stopped at the hillside cafe surrounded by fairy lights as the cold mountain mist rolled in? Holding those steaming cups of hot chai, laughing at random jokes, and talking about life made the chilly weather feel so warm and cozy.',
+      location: 'Hillside Cafe, Murree'
     },
     {
       id: 'mem-3',
-      title: 'Stargazing Under the Open Sky',
-      date: 'May 18, 2026',
-      imageUrl: '/src/assets/images/memory_stargazing_1786568784986.jpg',
-      caption: 'Wrapped in blankets, counting shooting stars and sharing big dreams.',
-      detailedStory: 'Out away from city lights, we made wishes on stars and talked about where we wanted to be in 5 years. I remember thinking how rare and genuine your spirit is.',
-      location: 'Whispering Pines Hill'
+      title: 'Watching Sunset from Kashmir Point',
+      date: 'Golden Hour at Murree Hills',
+      imageUrl: '/src/assets/images/murree_hills_sunset_1787247493327.jpg',
+      caption: 'Standing above the clouds as the sun painted the mountain hills golden.',
+      detailedStory: 'Standing together at the viewpoint looking out over the rolling green mountains as the evening sky turned into shades of violet and gold. We both paused for a second just taking it all in—a peaceful, unforgettable moment I will always cherish.',
+      location: 'Kashmir Point, Murree'
     }
   ],
   appreciations: [
@@ -110,6 +110,6 @@ Today is completely yours. I hope you feel surrounded by all the happiness, laug
     }
   ],
   scratchSurpriseTitle: 'Your Official Birthday Voucher 🎟️',
-  scratchSurpriseMessage: 'VALID FOR: One Unlimited Coffee, Sunset Hangout & Anything You Want Day — Entirely On Me! ☕🌅🍰',
+  scratchSurpriseMessage: 'VALID FOR: One Unlimited Murree Hangout Trip, Hot Chai & Anything You Want Day — Entirely On Me! ☕🏔️🍰',
   musicTrack: 'ambient'
 };
