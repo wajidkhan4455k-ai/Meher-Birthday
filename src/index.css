@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-handwriting, .font-joined {
+    font-family: 'Dancing Script', 'Alex Brush', 'Great Vibes', 'Caveat', cursive;
+  }
+  .font-script {
+    font-family: 'Alex Brush', 'Great Vibes', 'Dancing Script', cursive;
+  }
+  .font-serif-title {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom candle flame animation */
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px rgba(255, 180, 50, 0.9));
+  }
+  25% {
+    transform: scale(1.08) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(255, 200, 80, 1));
+  }
+  50% {
+    transform: scale(0.95) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(255, 160, 40, 0.8));
+  }
+  75% {
+    transform: scale(1.05) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 14px rgba(255, 190, 60, 0.95));
+  }
+}
+
+.animate-flame {
+  animation: flame-flicker 1.2s infinite ease-in-out;
+}
+
+/* Floating animation for lanterns and background particles */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: float-slow 4s infinite ease-in-out;
+}
+
+@keyframes float-delay {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-2deg);
+  }
+}
+
+.animate-float-delay {
+  animation: float-delay 5s infinite ease-in-out 1s;
+}
+
+/* Subtle twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.2); }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+/* Paper texture / card tape effect */
+.tape-strip {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0b16;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b2a54;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5b3e82;
+}
